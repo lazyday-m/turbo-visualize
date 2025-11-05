@@ -1,0 +1,8 @@
+web:
+- 'apps/web/**/*'
+mobile:
+- 'apps/mobile/**/*'
+pc:
+- 'apps/pc/**/*'
+docs:
+- 'apps/docs/**/*'
