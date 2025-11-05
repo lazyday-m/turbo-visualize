@@ -15,10 +15,8 @@ packages:
     - changed-files:
       - any-glob-to-any-file: 'packages/**/*'
 common:
-  - any:
-    - changed-files:
-      - any-glob-to-any-file: '**/*'
-      - all-glob-to-all-files: ['apps/**/*', 'packages/**/*']
+  - changed-files:
+    - any-glob-to-any-file: '**/*'
 
 
 
