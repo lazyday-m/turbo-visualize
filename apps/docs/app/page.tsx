@@ -33,7 +33,7 @@ export default function Home() {
         />
         <ol>
           <li>
-            DOCS
+            DOCS 수정 합니다:
           </li>
           <li>Save and see your changes instantly.</li>
         </ol>
