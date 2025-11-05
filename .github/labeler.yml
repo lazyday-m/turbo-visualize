@@ -1,8 +1,20 @@
 web:
-- 'apps/web/**/*'
+  - changed-files: 
+    - any-glob-to-any-file: 'apps/web/**/*'
 mobile:
-- 'apps/mobile/**/*'
+  - changed-files:
+    - any-glob-to-any-file: 'apps/mobile/**/*'
 pc:
-- 'apps/pc/**/*'
+  - changed-files:
+    - any-glob-to-any-file: 'apps/pc/**/*'
 docs:
-- 'apps/docs/**/*'
+  - changed-files:
+    - any-glob-to-any-file: 'apps/docs/**/*'
+packages:
+  - any:
+    - changed-files:
+      - any-glob-to-any-file: 'packages/**/*'
+common:
+  - any:
+    - changed-files:
+      - any-glob-to-any-file: '**/*'

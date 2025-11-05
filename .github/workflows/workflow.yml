@@ -26,8 +26,6 @@ jobs:
         echo "${{ github.repository }}"
         echo "${{ github.ref }}"
         echo "${{ github.head_ref }}"
-        echo "OS: $RUNNER_OS"
-        echo "ARCH: $RUNNER_ARCH"
 
     - name: Build docs
       run: npm run build --filter=docs
