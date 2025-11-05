@@ -17,7 +17,7 @@ function App() {
       </div>
       
       <p className="read-the-docs">
-        Mobile Test 수정함
+        Mobile Test 수정함2
       </p>
     </>
   )
