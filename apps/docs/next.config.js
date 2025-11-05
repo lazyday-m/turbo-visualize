@@ -1,8 +1,8 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   output: 'export',
-  basePath: '/turbo-visualize',
-  assetPrefix: '/turbo-visualize/',
+  basePath: '/turbo-visualize/docs',
+  assetPrefix: '/turbo-visualize/docs/',
   images: {
     unoptimized: true,
   },
