@@ -52,7 +52,7 @@ jobs:
         id: slack-start
         uses: slackapi/slack-github-action@v1.27.0
         with:
-          payload: '{"channel":"#git","text":"배포 시작 테스트합니다!"}'
+          payload: '{"channel":"${{ secrets.SLACK_CHANNEL_ID }}","text":"배포 시작 테스트합니다!"}'
         env:
           SLACK_BOT_TOKEN: ${{ secrets.SLACK_BOT_TOKEN }}
 
