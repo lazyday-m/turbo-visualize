@@ -20,13 +20,24 @@ jobs:
     - name: Install dependencies
       run: npm install
 
-    - name: Build project
+    - name: Build docs
       run: npm run build --filter=docs
+    
+    - name: Build mobile
+      run: npm run build --filter=mobile
+    
+    - name: prepare deploy folder
+      run: |
+        mkdir -p public/docs
+        mkdir -p public/mobile
+
+        cp -r apps/mobile/build/* public/mobile/
+        cp -r apps/docs/out/* public/docs/
     
     - name: Upload build artifact
       uses: actions/upload-pages-artifact@v3
       with:
-        path: apps/docs/out
+        path: public
 
   deploy:
     needs: build
