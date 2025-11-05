@@ -1,18 +1,15 @@
-name: PR Labeler
+name: Labeler
 on:
-  pull_request_target:
-    types: [opened, reopened, synchronize]
-
-permissions:
-  contents: read
-  pull-requests: write
+  - pull_request_target
 
 jobs:
   labeler:
+    permissions:
+      pull-requests: write
+      contents: read
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
-      - uses: actions/labeler@v4
+      - uses: actions/labeler@v6
         with:
           repo-token: "${{ secrets.GITHUB_TOKEN }}"
           configuration-path: .github/labeler.yml
