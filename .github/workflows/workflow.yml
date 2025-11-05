@@ -25,6 +25,12 @@ jobs:
     
     - name: Build mobile
       run: npm run build --filter=mobile
+
+    - name: Build web
+      run: npm run build --filter=web
+    
+    - name: Build pc
+      run: npm run build --filter=pc
     
     - name: prepare deploy folder
       run: |
@@ -38,6 +44,16 @@ jobs:
       uses: actions/upload-pages-artifact@v3
       with:
         path: public
+  
+  notify:
+    runs-on: ubuntu-latest
+    steps:
+      - name: send slack notification
+        uses: slackapi/slack-github-action@v1.23.0
+        with:
+          payload: '{"text":"배포 시작"}'
+        env:
+          SLACK_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK_URL }}
 
   deploy:
     needs: build
