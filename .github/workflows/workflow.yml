@@ -50,8 +50,8 @@ jobs:
     steps:
       - name: send slack notification
         id: slack-start
-        uses: slackapi/slack-github-action@v1.28.0
-       with:
+        uses: slackapi/slack-github-action@v1
+        with:
           channel-id: ${{ secrets.SLACK_CHANNEL_ID }}
           payload: '{"text":"배포 시작 테스트합니다!"}'
         env:
