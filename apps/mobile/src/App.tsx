@@ -17,7 +17,7 @@ function App() {
       </div>
       
       <p className="read-the-docs">
-        Mobile
+        Mobile Test
       </p>
     </>
   )
