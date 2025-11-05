@@ -31,7 +31,7 @@ jobs:
         mkdir -p public/docs
         mkdir -p public/mobile
 
-        cp -r apps/mobile/build/* public/mobile/
+        cp -r apps/mobile/dist/* public/mobile/
         cp -r apps/docs/out/* public/docs/
     
     - name: Upload build artifact
