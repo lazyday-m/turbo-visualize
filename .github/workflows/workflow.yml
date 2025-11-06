@@ -9,6 +9,11 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
+    - name: variable
+      run: |
+        echo $GITHUB_SHA
+        echo $GITHUB_REPOSITORY
+        
     - name: Checkout code
       uses: actions/checkout@v4
 
